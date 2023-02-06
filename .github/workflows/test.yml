@@ -1,29 +1,44 @@
 name: Test
-on: [push]
+
+on:
+  push:
+    paths:
+      - '**.js'
+      - '**.ts'
+      - '**.tsx'
+      - '**.json'
+      - '**/ci.yml'
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  test:
-    runs-on: macos-latest
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18]
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Configure Node caching
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - name: Install Node dependencies
-        run: npm install
-      - name: Run tests
-        run: npm test
-        timeout-minutes: 5
-      - name: Upload test videos
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-videos
-          path: test-videos/
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Install dependencies 👨🏻‍💻
+      run: npm install
+    
+    - name: E2E Test for Electron 🧪
+      run: npm test
+   
+    - name: Upload Test Results 🗃
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: screenshots
+        path: tests/screenshots/**
