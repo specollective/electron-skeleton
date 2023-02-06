@@ -35,9 +35,9 @@ jobs:
     - name: E2E Test for Electron 🧪
       run: npm test
    
-    - name: Upload Test Results 🗃
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: screenshots
-        path: tests/screenshots/**
+    # - name: Upload Test Results 🗃
+    #   if: always()
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: screenshots
+    #     path: tests/screenshots/**
