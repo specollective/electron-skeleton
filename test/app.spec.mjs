@@ -15,8 +15,6 @@ test('App launches and quits', async () => {
   await page.waitForSelector('h1#title', {
     timeout: 90000,
   });
-
-  await app.close();
   
   const title = await page.$eval('h1#title', (el) => el.textContent);
 
