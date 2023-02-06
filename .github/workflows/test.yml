@@ -1,16 +1,15 @@
 name: Test
-
-on:
-  push:
-    paths:
-      - '**.js'
-      - '**.ts'
-      - '**.tsx'
-      - '**.json'
-      - '**/ci.yml'
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
+  # push:
+  #   paths:
+  #     - '**.js'
+  #     - '**.ts'
+  #     - '**.tsx'
+  #     - '**.json'
+  #     - '**/ci.yml'
+  #   branches: [ main ]
+  # pull_request:
+  #   branches: [ main ]
 
 jobs:
   build:
