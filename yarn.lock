@@ -452,6 +452,14 @@
     "mkdirp" "^1.0.4"
     "rimraf" "^3.0.2"
 
+"@playwright/test@^1.30.0":
+  "integrity" "sha512-SVxkQw1xvn/Wk/EvBnqWIq6NLo1AppwbYOjNLmyU0R1RoQ3rLEBtmjTnElcnz8VEtn11fptj1ECxK0tgURhajw=="
+  "resolved" "https://registry.npmjs.org/@playwright/test/-/test-1.30.0.tgz"
+  "version" "1.30.0"
+  dependencies:
+    "@types/node" "*"
+    "playwright-core" "1.30.0"
+
 "@sindresorhus/is@^4.0.0":
   "integrity" "sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw=="
   "resolved" "https://registry.npmjs.org/@sindresorhus/is/-/is-4.6.0.tgz"
@@ -4535,6 +4543,18 @@
   "version" "4.2.0"
   dependencies:
     "find-up" "^4.0.0"
+
+"playwright-core@1.30.0":
+  "integrity" "sha512-7AnRmTCf+GVYhHbLJsGUtskWTE33SwMZkybJ0v6rqR1boxq2x36U7p1vDRV7HO2IwTZgmycracLxPEJI49wu4g=="
+  "resolved" "https://registry.npmjs.org/playwright-core/-/playwright-core-1.30.0.tgz"
+  "version" "1.30.0"
+
+"playwright@^1.30.0":
+  "integrity" "sha512-ENbW5o75HYB3YhnMTKJLTErIBExrSlX2ZZ1C/FzmHjUYIfxj/UnI+DWpQr992m+OQVSg0rCExAOlRwB+x+yyIg=="
+  "resolved" "https://registry.npmjs.org/playwright/-/playwright-1.30.0.tgz"
+  "version" "1.30.0"
+  dependencies:
+    "playwright-core" "1.30.0"
 
 "plist@^3.0.0", "plist@^3.0.4", "plist@^3.0.5":
   "integrity" "sha512-WiIVYyrp8TD4w8yCvyeIr+lkmrGRd5u0VbRnU+tP/aRLxP/YadJUYOMZJ/6hIa3oUyVCsycXvtNRgd5XBJIbiA=="

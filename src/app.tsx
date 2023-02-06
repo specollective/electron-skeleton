@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 function LandingPage() {
   return (
     <main>
-      <h1>Electron Skeleton</h1>
+      <h1 id="title">Electron Skeleton</h1>
     </main>
   );
 }
