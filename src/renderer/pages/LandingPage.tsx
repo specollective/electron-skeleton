@@ -14,7 +14,7 @@ export default function LandingPage() {
   return (
     <main>
       <h1 id="title">Electron Skeleton</h1>
-      <p id="message">{message}</p>
+      { message && <p id="message">{message}</p> }
     </main>
   );
 }
