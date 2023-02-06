@@ -1,5 +1,5 @@
 name: Test
-on: on: [push]
+on: [push]
 
 jobs:
   test:
