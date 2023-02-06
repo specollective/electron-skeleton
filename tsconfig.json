@@ -13,8 +13,8 @@
     "resolveJsonModule": true,
     "paths": {
       "*": ["node_modules/*"],
-      "utils/*": ["./src/utils/*"],
-      "services/*": ["./src/services/*"],
+      "main/*": ["./src/main/*"],
+      "renderer/*": ["./src/renderer/*"],
     },
     "jsx": "react-jsx",
     "types": ["react/next", "react-dom/next"],
